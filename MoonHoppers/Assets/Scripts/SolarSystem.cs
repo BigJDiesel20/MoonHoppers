@@ -8,8 +8,5 @@ public class SolarSystem
     [Header("Sun & Planetary Systems")]
     public GameObject sun;
     public List<PlanetarySystem> planetarySystems;
-
-    
-    
-    
+    public GameObject SolarSystemConatiner;
 }

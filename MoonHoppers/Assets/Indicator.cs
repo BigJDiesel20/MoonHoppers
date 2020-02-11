@@ -60,7 +60,7 @@ public class Indicator : MonoBehaviour
             newIndicator.name = string.Format("Indicator {0}", i + 1);
             newIndicator.rectTransform.SetParent(canvas);
             indicators.Add(newIndicator);
-            trackedObject.Add(GameManager.Instance.CurrentSolarSystem.planetarySystems[i].planet.obitalBody.transform);
+            trackedObject.Add(GameManager.Instance.CurrentSolarSystem.planetarySystems[i].planet.orbitalBody.transform);
             newIndicator.rectTransform.localScale = new Vector3(40,40);
         }
         isInitialized = true;

@@ -106,15 +106,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b766d71cedd71a479bc61569b6d833f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectToOrbit: {fileID: 0}
-  ObjectToOrbitPreviousPosition: {x: 0, y: 0, z: 0}
-  Satillite: []
-  ellipticalOrbitDistance: 300
-  objectRotationSpeed: 0.14
   isOrbiting: 1
-  debug: 0
-  debug2: 0
-  secondsToOrbit: 3
+  planetarySystem:
+    sun: {fileID: 0}
+    planet:
+      nameTag: 
+      orbitalbodyPrefab: {fileID: 0}
+      orbitalBody: {fileID: 0}
+      planetDistanceFromSun: 0
+      planetarySecondPerOrbit: 0
+      orbitalDirection: 1
+      distanceTilt: 0
+      tiltDirection: 1
+      rotationSpeed: 0
+      planetRotationDirection: 1
+      gravity: 0
+    satellites: []
+  orbitalType: 1
+  nameTag: 
+  satellitePlace: 0
+  OrbitalCycle: 0
+  rotY: 0
 --- !u!54 &3427913334292593638
 Rigidbody:
   m_ObjectHideFlags: 0

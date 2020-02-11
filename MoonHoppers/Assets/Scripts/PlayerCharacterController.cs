@@ -170,7 +170,7 @@ public class PlayerCharacterController : MonoBehaviour
             {
                 
 
-                Vector3 direction = transform.position - GameManager.Instance.CurrentSolarSystem.planetarySystems[index].planet.obitalBody.transform.position;
+                Vector3 direction = transform.position - GameManager.Instance.CurrentSolarSystem.planetarySystems[index].planet.orbitalBody.transform.position;
                 direction = direction.normalized;
                 Quaternion rotateTo = Quaternion.FromToRotation(-Vector3.up, direction);
 

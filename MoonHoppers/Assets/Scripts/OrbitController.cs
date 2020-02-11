@@ -5,7 +5,7 @@ using UnityEngine;
 public class OrbitController : MonoBehaviour
 {
     Rigidbody rb;
-    public bool isOrbiting = true;
+    public bool isOrbiting;
 
     //
 
@@ -27,9 +27,9 @@ public class OrbitController : MonoBehaviour
 
     private void Awake()
     {
+        isOrbiting = true;
 
-        
-        
+
     }
     // Start is called before the first frame update
     void Start()
@@ -75,8 +75,9 @@ public class OrbitController : MonoBehaviour
 
     void SatellitesOrbit(Transform satellite)
     {
-        Vector3 planet = planetarySystem.planet.obitalBody.transform.position;
-        float satelliteDistancefromPlanet = planetarySystem.satellites[satellitePlace].satelliteDistancefromPlanet;
+        Vector3 planet = planetarySystem.planet.orbitalBody.transform.position;
+        float minDistance = planetarySystem.planet.radius + planetarySystem.satellites[satellitePlace].radius;
+        float satelliteDistancefromPlanet = Mathf.Max(minDistance, planetarySystem.satellites[satellitePlace].satelliteDistancefromPlanet);
         float distanceTilt = planetarySystem.satellites[satellitePlace].distanceTilt;
         float satelliteSecondPerOrbit = planetarySystem.satellites[satellitePlace].satelliteSecondPerOrbit;
         OrbitalCycle += 2 * Mathf.PI * Time.deltaTime;

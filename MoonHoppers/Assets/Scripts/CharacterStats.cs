@@ -31,7 +31,7 @@ public class CharacterStats : MonoBehaviour
         if (sun == null || planet == null)
         {
             sun = GameManager.Instance.OrbitManager.solarSystems[0].sun.GetComponentInChildren<SphereCollider>();
-            planet = GameManager.Instance.OrbitManager.solarSystems[0].planetarySystems[characterController.index].planet.obitalBody.transform;
+            planet = GameManager.Instance.OrbitManager.solarSystems[0].planetarySystems[characterController.index].planet.orbitalBody.transform;
             return;
         }
         SunDamage();

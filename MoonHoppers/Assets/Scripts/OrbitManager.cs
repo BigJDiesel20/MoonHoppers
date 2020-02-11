@@ -13,11 +13,12 @@ public class OrbitManager : MonoBehaviour
         foreach (SolarSystem solarSystem in solarSystems)
         {
             int count = 0;
+            GameObject SolarSystemConatiner = new GameObject("SolarSystemConatiner");
 
             foreach (PlanetarySystem planetarySystem in solarSystem.planetarySystems)
             {
                 planetarySystem.sun = solarSystem.sun;
-                planetarySystem.Initialize(count);                
+                planetarySystem.Initialize(count, SolarSystemConatiner);                
             }
             
         }
